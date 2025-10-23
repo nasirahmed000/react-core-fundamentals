@@ -1,7 +1,8 @@
 // import Gallery, { Card as Image, Profile } from "./components/Gallery" ; //default import
 // import Test from "./components/Test";
 
-import Avatar from "./components/Avatar";
+// import Avatar from "./components/Avatar";
+// import PackingList from "./components/PackingList";
 
 
 // function App() {
@@ -86,14 +87,49 @@ import Avatar from "./components/Avatar";
 // });
 
 
-export default function App() {
-  return (
-    <Avatar
-      person={{ name: 'Lin Lanying', imageId: '1bX5QH6' }}
-      size={100}
-    />
-  );
-}
+// export default function App() {
+//   return (
+//     <Avatar
+//       person={{ name: 'Lin Lanying', imageId: '1bX5QH6' }}
+//       size={100}
+//     />
+//   ); 
+// }
+const people = [{
+  id: 0,
+  name: 'Creola Katherine Johnson',
+  profession: 'mathematician',
+}, {
+  id: 1,
+  name: 'Mario José Molina-Pasquel Henríquez',
+  profession: 'chemist',
+}, {
+  id: 2,
+  name: 'Mohammad Abdus Salam',
+  profession: 'physicist',
+}, {
+  id: 3,
+  name: 'Percy Lavon Julian',
+  profession: 'chemist',  
+}, {
+  id: 4,
+  name: 'Subrahmanyan Chandrasekhar',
+  profession: 'astrophysicist',
+}];
 
 
- 
+ export default function App(){
+  const chemists = people.filter(person => person.profession === 'chemist');
+
+  const listItems = chemists.map((chemists)=> <li key={chemists.id}>{chemists.name}</li>)
+
+
+     return (
+       <div>
+        <div>
+          {listItems}
+        </div>
+       </div>
+     );
+ }
+
