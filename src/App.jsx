@@ -361,9 +361,7 @@ export default function Gallery() {
       />
     </>
   );
-}
-
-
+} 
 
 
 
