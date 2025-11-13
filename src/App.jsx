@@ -4,9 +4,7 @@
 // import Avatar from "./components/Avatar";
 // import PackingList from "./components/PackingList";
 
-
 // function App() {
-  
 
 //   return (
 //    <div>
@@ -15,12 +13,11 @@
 //     <Profile />
 //     <Image/>
 //     <Test/>
-   
 
 //    </div>
- 
+
 //   )
-// } 
+// }
 
 // export default App
 
@@ -52,8 +49,6 @@
 //   );
 // }
 
-
-  
 // const person = {
 //   name: 'Gregorio Y. Zara',
 //   theme: {
@@ -70,13 +65,13 @@
 //         className="avatar"
 //         src="https://i.imgur.com/7vQD0fPs.jpg"
 //         alt="Gregorio Y. Zara"
-//       /> 
+//       />
 //       <ul>
 //         <li>Improve the videophone</li>
 //         <li>Prepare aeronautics lectures</li>
 //         <li>Work on the alcohol-fuelled engine</li>
 //       </ul>
-//     </div> 
+//     </div>
 //   );
 // }
 // person: {
@@ -86,14 +81,13 @@
 //   size: 100
 // });
 
-
 // export default function App() {
 //   return (
 //     <Avatar
 //       person={{ name: 'Lin Lanying', imageId: '1bX5QH6' }}
 //       size={100}
 //     />
-//   ); 
+//   );
 // }
 // const people = [{
 //   id: 0,
@@ -110,7 +104,7 @@
 // }, {
 //   id: 3,
 //   name: 'Percy Lavon Julian',
-//   profession: 'chemist',  
+//   profession: 'chemist',
 // }, {
 //   id: 4,
 //   name: 'Subrahmanyan Chandrasekhar',
@@ -122,13 +116,12 @@
 
 //   const listItems = chemists.map((chemists)=> <li key={chemists.id}>{chemists.name}</li>)
 
-
 //      return (
 //        <div>
 //         <div>
-//           {listItems} 
+//           {listItems}
 //         </div>
-//        </div> 
+//        </div>
 //      );
 //  }
 
@@ -141,7 +134,6 @@
 //   );
 // }
 
-   
 // function AlertButton({ message, children }) {
 //   return (
 //     <button onClick={() => alert(message)}>
@@ -190,7 +182,7 @@
 //       onPlayMovie={() => alert('Playing!')}
 //       onUploadImage={() => alert('Uploading!')}
 //     />
-//   );  
+//   );
 // }
 
 // function Toolbar({ onPlayMovie, onUploadImage }) {
@@ -214,7 +206,6 @@
 //   );
 // }
 
-
 // export default function Toolbar() {
 //   return (
 //     <div className="Toolbar" onClick={() => {
@@ -230,8 +221,6 @@
 //   );
 // }
 
-
-
 // function Button({ onClick, children }) {
 //   return (
 //     <button onClick={e => {
@@ -242,7 +231,6 @@
 //     </button>
 //   );
 // }
- 
 
 // export default function Toolbar() {
 //   return (
@@ -258,7 +246,7 @@
 //     </div>
 //   );
 // }
- 
+
 // export default function Signup() {
 //   return (
 //     <form onSubmit={(e) => alert('Submitting!')}>
@@ -280,23 +268,17 @@
 //   );
 // }
 
-
 // import { sculptureList } from './data.js';
 
 // import { useState } from 'react';
-
-
 
 // export default function Gallery() {
 
 //  const [index, setIndex] = useState(0);
 
-
-//   function handleClick() { 
+//   function handleClick() {
 //     setIndex (index +1);
 //   }
-
-
 
 //   let sculpture = sculptureList[index];
 //   return (
@@ -305,14 +287,14 @@
 //         Next
 //       </button>
 //       <h2>
-//         <i>{sculpture.name} </i> 
+//         <i>{sculpture.name} </i>
 //         by {sculpture.artist}
 //       </h2>
-//       <h3>  
+//       <h3>
 //         ({index + 1} of {sculptureList.length})
 //       </h3>
-//       <img   
-//         src={sculpture.url} 
+//       <img
+//         src={sculpture.url}
 //         alt={sculpture.alt}
 //       />
 //       <p>
@@ -321,7 +303,6 @@
 //     </>
 //   );
 // }
-
 
 // import { useState } from 'react';
 // import { sculptureList } from './data.js';
@@ -345,23 +326,23 @@
 //         Next
 //       </button>
 //       <h2>
-//         <i>{sculpture.name} </i> 
+//         <i>{sculpture.name} </i>
 //         by {sculpture.artist}
 //       </h2>
-//       <h3>  
+//       <h3>
 //         ({index + 1} of {sculptureList.length})
 //       </h3>
 //       <button onClick={handleMoreClick}>
 //         {showMore ? 'Hide' : 'Show'} details
 //       </button>
 //       {showMore && <p>{sculpture.description}</p>}
-//       <img 
-//         src={sculpture.url} 
+//       <img
+//         src={sculpture.url}
 //         alt={sculpture.alt}
 //       />
 //     </>
 //   );
-// } 
+// }
 
 // import { useState } from 'react';
 
@@ -455,7 +436,7 @@
 //         ({person.email})
 //       </p>
 //     </>
-//   ); 
+//   );
 // }
 
 // import { useState } from 'react';
@@ -544,8 +525,8 @@
 //         <br />
 //         (located in {person.artwork.city})
 //       </p>
-//       <img 
-//         src={person.artwork.image} 
+//       <img
+//         src={person.artwork.image}
 //         alt={person.artwork.title}
 //       />
 //     </>
@@ -827,81 +808,92 @@
 //   );
 // }
 
+// import { useState } from "react";
 
-import { useState } from 'react';
+// let nextId = 3;
+// const initialList = [
+//   { id: 0, title: "Big Bellies", seen: false },
+//   { id: 1, title: "Lunar Landscape", seen: false },
+//   { id: 2, title: "Terracotta Army", seen: true },
+// ];
 
-let nextId = 3;
-const initialList = [
-  { id: 0, title: 'Big Bellies', seen: false },
-  { id: 1, title: 'Lunar Landscape', seen: false },
-  { id: 2, title: 'Terracotta Army', seen: true },
-];
+// export default function BucketList() {
+//   const [myList, setMyList] = useState(initialList);
+//   const [yourList, setYourList] = useState(initialList);
 
-export default function BucketList() {
-  const [myList, setMyList] = useState(initialList);
-  const [yourList, setYourList] = useState(
-    initialList
-  );
+//   function handleToggleMyList(artworkId, nextSeen) {
+//     setMyList(
+//       myList.map((artwork) => {
+//         if (artwork.id === artworkId) {
+//           // Create a *new* object with changes
+//           return { ...artwork, seen: nextSeen };
+//         } else {
+//           // No changes
+//           return artwork;
+//         }
+//       })
+//     );
+//   }
 
-  function handleToggleMyList(artworkId, nextSeen) {
-    setMyList(myList.map(artwork => {
-      if (artwork.id === artworkId) {
-        // Create a *new* object with changes
-        return { ...artwork, seen: nextSeen };
-      } else {
-        // No changes
-        return artwork;
-      }
-    }));
-  }
+//   function handleToggleYourList(artworkId, nextSeen) {
+//     setYourList(
+//       yourList.map((artwork) => {
+//         if (artwork.id === artworkId) {
+//           // Create a *new* object with changes
+//           return { ...artwork, seen: nextSeen };
+//         } else {
+//           // No changes
+//           return artwork;
+//         }
+//       })
+//     );
+//   }
 
-  function handleToggleYourList(artworkId, nextSeen) {
-    setYourList(yourList.map(artwork => {
-      if (artwork.id === artworkId) {
-        // Create a *new* object with changes
-        return { ...artwork, seen: nextSeen };
-      } else {
-        // No changes
-        return artwork;
-      }
-    }));
-  }
+//   return (
+//     <>
+//       <h1>Art Bucket List</h1>
+//       <h2>My list of art to see:</h2>
+//       <ItemList artworks={myList} onToggle={handleToggleMyList} />
+//       <h2>Your list of art to see:</h2>
+//       <ItemList artworks={yourList} onToggle={handleToggleYourList} />
+//     </>
+//   );
+// }
 
-  return (
-    <>
-      <h1>Art Bucket List</h1>
-      <h2>My list of art to see:</h2>
-      <ItemList
-        artworks={myList}
-        onToggle={handleToggleMyList} />
-      <h2>Your list of art to see:</h2>
-      <ItemList
-        artworks={yourList}
-        onToggle={handleToggleYourList} />
-    </>
-  );
-}
+// function ItemList({ artworks, onToggle }) {
+//   return (
+//     <ul>
+//       {artworks.map((artwork) => (
+//         <li key={artwork.id}>
+//           <label>
+//             <input
+//               type="checkbox"
+//               checked={artwork.seen}
+//               onChange={(e) => {
+//                 onToggle(artwork.id, e.target.checked);
+//               }}
+//             />
+//             {artwork.title}
+//           </label>
+//         </li>
+//       ))}
+//     </ul>
+//   );
+// }
 
-function ItemList({ artworks, onToggle }) {
-  return (
-    <ul>
-      {artworks.map(artwork => (
-        <li key={artwork.id}>
-          <label>
-            <input
-              type="checkbox"
-              checked={artwork.seen}
-              onChange={e => {
-                onToggle(
-                  artwork.id,
-                  e.target.checked
-                );
-              }}
-            />
-            {artwork.title}
-          </label>
-        </li>
-      ))}
-    </ul>
-  );
-}
+// import Form from "./components/Form";
+// import "./styles.css";
+
+// const statuses = ["empty", "typing", "submitting", "success", "error"];
+
+// function App() {
+//   return (
+//     <div>
+//       {statuses.map((status) => (
+//         <Form key={status} status={status} />
+//       ))}
+//     </div>
+//   );
+// }
+
+// export default App;
