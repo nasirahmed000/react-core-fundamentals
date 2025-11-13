@@ -898,7 +898,7 @@
 
 // export default App;
 import Form from "./components/Form";
-
+import "./components/Styles.css";
 function App() {
   return (
     <div>
