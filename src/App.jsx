@@ -897,14 +897,71 @@
 // }
 
 // export default App;
-import Form from "./components/Form";
-import "./components/Styles.css";
-function App() {
+// import Form from "./components/Form";
+// import "./components/Styles.css";
+// function App() {
+//   return (
+//     <div>
+//       <Form />
+//     </div>
+//   );
+// }
+
+// export default App;
+
+import { useState } from "react";
+
+export default function NameInputExample() {
+  // state তৈরি করা হলো
+  const [name, setName] = useState("");
+
+  // ইনপুট পরিবর্তন হলে এই ফাংশন চলবে
+  const handleChange = (e) => {
+    setName(e.target.value); // ইনপুটের মান state এ সেট করা হচ্ছে
+  };
+
   return (
-    <div>
-      <Form />
+    <div style={{ textAlign: "center", marginTop: "50px" }}>
+      <h2>Type Your Name 👇</h2>
+      <input
+        type="text"
+        placeholder="Enter your name"
+        value={name}
+        onChange={handleChange}
+        style={{
+          padding: "10px",
+          fontSize: "16px",
+          borderRadius: "8px",
+          border: "1px solid #ccc",
+          outline: "none",
+        }}
+      />
+      <h3 style={{ marginTop: "20px" }}>
+        {name ? `Hello, ${name}! 👋` : "Your name will appear here..."}
+      </h3>
     </div>
   );
 }
 
-export default App;
+// import { useState } from "react";
+
+// export default function InputExample() {
+//   const [text, setText] = useState("");
+
+//   const handleChange = (e) => {
+//     setText(e.target.value);
+//   };
+
+//   return (
+//     <div style={{ textAlign: "center", marginTop: "30px" }}>
+//       <input
+//         type="text"
+//         placeholder="Type something..."
+//         value={text}
+//         onChange={handleChange}
+//         style={{ padding: "8px", fontSize: "16px" }}
+//       />
+//       <p>You typed: {text}</p>
+//     </div>
+//   );
+// }
