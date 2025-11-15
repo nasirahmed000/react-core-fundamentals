@@ -944,10 +944,8 @@ export default function NameInputExample() {
 }
 
 // import { useState } from "react";
-
 // export default function InputExample() {
 //   const [text, setText] = useState("");
-
 //   const handleChange = (e) => {
 //     setText(e.target.value);
 //   };
