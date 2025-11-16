@@ -949,7 +949,6 @@ export default function NameInputExample() {
 //   const handleChange = (e) => {
 //     setText(e.target.value);
 //   };
-
 //   return (
 //     <div style={{ textAlign: "center", marginTop: "30px" }}>
 //       <input
@@ -963,3 +962,11 @@ export default function NameInputExample() {
 //     </div>
 //   );
 // }
+
+// import TravelPlan from "./components/TravelPlan";
+
+// function App() {
+//     return <TravelPlan />;
+// }
+
+// export default App;
