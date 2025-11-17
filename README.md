@@ -50,7 +50,7 @@ Basic hooks for handling side effects and state changes
 
 🛠️ Getting Started
 1️⃣ Clone the repository
-git clone https://github.com/YOUR-USERNAME/react-core-fundamentals
+git clone [https://github.com/YOUR-USERNAME/react-core-fundamentals](https://github.com/nasirahmed000/react-core-fundamentals/)
 
 2️⃣ Install dependencies
 npm install
