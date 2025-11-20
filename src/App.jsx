@@ -1070,99 +1070,101 @@
 
 // ==================================================================================================
 
-// import { useState } from "react";
-// import AddTask from "./components/AddTask";
-// import TaskList from "./components/TaskList";
-// import { initialTasks } from "./components/Task";
-// // import { initialTasks } from "./data/tasks";
-
-// export default function App() {
-//   const [tasks, setTasks] = useState(initialTasks);
-
-//   const getNextId = (data) => {
-//     const maxId = data.reduce(
-//       (prev, current) => (prev && prev > current.id ? prev : current.id),
-//       0
-//     );
-
-//     return maxId + 1;
-//   };
-
-//   // handlers
-//   const handleAddTask = (text) => {
-//     setTasks([
-//       ...tasks,
-//       {
-//         id: getNextId(tasks),
-//         text: text,
-//         done: false,
-//       },
-//     ]);
-//   };
-
-//   const handleChangeTask = (task) => {
-//     const nextTasks = tasks.map((t) => {
-//       if (t.id === task.id) {
-//         return task;
-//       } else {
-//         return t;
-//       }
-//     });
-
-//     setTasks(nextTasks);
-//   };
-
-//   const handleDeleteTask = (taskId) => {
-//     setTasks(tasks.filter((t) => t.id !== taskId));
-//   };
-
-//   return (
-//     <>
-//       <h1>Prague itinerary</h1>
-
-//       <AddTask onAdd={handleAddTask} />
-
-//       <TaskList
-//         tasks={tasks}
-//         onChangeTask={handleChangeTask}
-//         onDeleteTask={handleDeleteTask}
-//       />
-//     </>
-//   );
-// }
-
 import { useState } from "react";
+import AddTask from "./components/AddTask";
+import TaskList from "./components/TaskList";
+// import { initialTasks } from "./components/Task";
+import { initialTasks } from "./data/tasks";
+import "./styles.css";
 
-export default function NameInputExample() {
-  // state তৈরি করা হলো
-  const [name, setName] = useState("");
+export default function App() {
+  const [tasks, setTasks] = useState(initialTasks);
 
-  // ইনপুট পরিবর্তন হলে এই ফাংশন চলবে
-  const handleChange = (e) => {
-    setName(e.target.value); // ইনপুটের মান state এ সেট করা হচ্ছে
+  const getNextId = (data) => {
+    const maxId = data.reduce(
+      (prev, current) => (prev && prev > current.id ? prev : current.id),
+      0
+    );
+
+    return maxId + 1;
+  };
+
+  // handlers
+  const handleAddTask = (text) => {
+    setTasks([
+      ...tasks,
+      {
+        id: getNextId(tasks),
+        text: text,
+        done: false,
+      },
+    ]);
+  };
+
+  const handleChangeTask = (task) => {
+    const nextTasks = tasks.map((t) => {
+      if (t.id === task.id) {
+        return task;
+      } else {
+        return t;
+      }
+    });
+
+    setTasks(nextTasks);
+  };
+
+  const handleDeleteTask = (taskId) => {
+    setTasks(tasks.filter((t) => t.id !== taskId));
   };
 
   return (
-    <div style={{ textAlign: "center", marginTop: "50px" }}>
-      <h2>Type Your Name 👇</h2>
-      <input
-        type="text"
-        placeholder="Enter your name"
-        value={name}
-        onChange={handleChange}
-        style={{
-          padding: "10px",
-          fontSize: "16px",
-          borderRadius: "8px",
-          border: "1px solid #ccc",
-          outline: "none",
-        }}
+    <>
+      <h1>Prague itinerary</h1>
+
+      <AddTask onAdd={handleAddTask} />
+
+      <TaskList
+        tasks={tasks}
+        onChangeTask={handleChangeTask}
+        onDeleteTask={handleDeleteTask}
       />
-      <h3 style={{ marginTop: "20px" }}>
-        {name ? `Hello, ${name}! 👋` : "Your name will appear here..."}
-      </h3>
-    </div>
+    </>
   );
 }
+
+// ==================================================================================================
+// import { useState } from "react";
+
+// export default function NameInputExample() {
+//   // state তৈরি করা হলো
+//   const [name, setName] = useState("");
+
+//   // ইনপুট পরিবর্তন হলে এই ফাংশন চলবে
+//   const handleChange = (e) => {
+//     setName(e.target.value); // ইনপুটের মান state এ সেট করা হচ্ছে
+//   };
+
+//   return (
+//     <div style={{ textAlign: "center", marginTop: "50px" }}>
+//       <h2>Type Your Name 👇</h2>
+//       <input
+//         type="text"
+//         placeholder="Enter your name"
+//         value={name}
+//         onChange={handleChange}
+//         style={{
+//           padding: "10px",
+//           fontSize: "16px",
+//           borderRadius: "8px",
+//           border: "1px solid #ccc",
+//           outline: "none",
+//         }}
+//       />
+//       <h3 style={{ marginTop: "20px" }}>
+//         {name ? `Hello, ${name}! 👋` : "Your name will appear here..."}
+//       </h3>
+//     </div>
+//   );
+// }
 
 // ==================================================================================================
